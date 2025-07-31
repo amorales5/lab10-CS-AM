@@ -1,13 +1,9 @@
 import math
 
 def square_root(a):
-    try:
-        if a<0:
-            raise ValueError
-        return math.sqrt(a)
-    except ValueError as e:
-        print(str(e))
-
+    if a<0:
+        raise ValueError ("ValueError, cannot take square root of negative number")
+    return math.sqrt(a)
 
 def hypotenuse(a,b):
     return math.hypot(a, b)
@@ -34,4 +30,3 @@ def log(a, b):
 
 def exp(a, b):
     return a ** b
-
