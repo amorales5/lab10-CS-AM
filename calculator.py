@@ -8,6 +8,7 @@ def square_root(a):
     except ValueError as e:
         print(str(e))
 
+
 def hypotenuse(a,b):
     return math.hypot(a, b)
 
@@ -22,17 +23,15 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    try:
-        return b / a
-    except ZeroDivisionError as e:
-        print(str(e))
+    if a == 0:
+        raise ZeroDivisionError("ZeroDivisionError: Division by zero isn't allowed.") #raise ZeroDivisionError if a == 0
+    return b / a
 
-def log(a,b):
-    try:
-        return math.log(a,b)
-    except ValueError as e:
-        print(str(e))
+def log(a, b):
+        if a <= 0 or a == 1:
+            raise ValueError("ValueError: Base must be > 0 and not equal to 1")
+        return math.log(b, a)
 
+def exp(a, b):
+    return a ** b
 
-def exp(a,b):
-    return a**b
