@@ -24,7 +24,7 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertRaises(ZeroDivisionError, div, 0, 0)
+        self.assertRaises(ZeroDivisionError, div, 0, 5)  #Dividing by zero will raise an error
 
     def test_logarithm(self): # 3 assertions
         self.assertEqual(log(10, 100), 2)  #Check log with base 10 and pos#
