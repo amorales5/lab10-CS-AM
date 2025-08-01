@@ -1,3 +1,7 @@
+#https://github.com/amorales5/lab10-CS-AM.git
+#Partner 1: Crystal Schmitt
+#Partner 2: Alexsis Morales
+
 import unittest
 from calculator import *
 
