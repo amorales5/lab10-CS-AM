@@ -13,9 +13,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-1,1), 0)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(3,2), 1)
-        self.assertEqual(sub(2,2), 0)
-        self.assertEqual(sub(-3,1), -4)
+        self.assertEqual(subtract(3,2), 1)
+        self.assertEqual(subtract(2,2), 0)
+        self.assertEqual(subtract(-3,1), -4)
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
@@ -33,19 +33,19 @@ class TestCalculator(unittest.TestCase):
         self.assertRaises(ZeroDivisionError, div, 0, 5)  #Dividing by zero will raise an error
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(10, 100), 2)  #Check log with base 10 and pos#
-        self.assertEqual(log(2, 8), 3)  #with base 2 and pos#
-        self.assertEqual(log(math.e, math.e), 1)  #with base e, should be 1
+        self.assertEqual(logarithm(10, 100), 2)  #Check log with base 10 and pos#
+        self.assertEqual(logarithm(2, 8), 3)  #with base 2 and pos#
+        self.assertEqual(logarithm(math.e, math.e), 1)  #with base e, should be 1
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertRaises(ValueError, log, 1, 10)  #base of 1 is invalid will raise an error
-        self.assertRaises(ValueError, log, 0, 10)  #base of 0 is invalid will raise an error
+        self.assertRaises(ValueError, logarithm, 1, 10)  #base of 1 is invalid will raise an error
+        self.assertRaises(ValueError, logarithm, 0, 10)  #base of 0 is invalid will raise an error
     # ##########################
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-             log(0, 10)
+             logarithm(0, 10)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3,4), 5)
